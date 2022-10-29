@@ -1,0 +1,28 @@
+{
+    "version": "0.1",
+    "name": "DADDYQR",
+    "description": "Do you want to convert url to qr code?",
+    "manifest_version": 3,
+    "permissions": [
+        "tabs"
+    ],
+    "action": {
+        "default_popup": "view/index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "js/main.js",
+                "js/qrcode.min.js",
+                "js/jquery.min.js"
+            ]
+        }
+    ],
+    "icons": {
+        "64": "/icons/64.png",
+        "96": "icons/96.png"
+    }
+}
